@@ -1,0 +1,109 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: rgba(244, 242, 245, 1);
+}
+
+header {
+  position: fixed;
+  width: 100vw;
+  height: 8vh;
+  padding: 0;
+  background-color: rgba(255, 255, 255, 1);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 1000;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+header #logo {
+  width: 15vw;
+  display: block;
+  position: absolute;
+  left: 0;
+  cursor: pointer;
+}
+header #logo img {
+  width: 40%;
+  display: block;
+  margin: 0 auto;
+}
+header #toggle-sidebar img {
+  width: 2rem;
+  display: block;
+  cursor: pointer;
+  position: absolute;
+  top: 30%;
+  left: 15vw;
+}
+
+header #user-menu {
+  position: absolute;
+  right: 0;
+}
+
+header .dropdown-toggle-user:hover {
+  background-color: rgba(244, 242, 245, 1);
+}
+
+header .dropdown-toggle-user:focus {
+  border: none;
+}
+
+aside {
+  width: 15vw;
+  min-height: 92vh;
+  top: 8vh;
+  height: auto;
+  position: fixed;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+aside nav ul {
+  padding: 0;
+  line-height: 3rem;
+}
+
+aside nav ul li {
+  list-style: none;
+  color: black;
+}
+aside nav ul li:hover {
+  cursor: pointer;
+  list-style: none;
+  width: 100%;
+  background-color: rgba(244, 242, 245, 1);
+}
+aside nav ul li a {
+  color: black;
+  display: block;
+  text-decoration: none;
+}
+
+aside nav ul li a svg {
+  margin: 0 10px;
+}
+
+main {
+  position: absolute;
+  width: 85vw;
+  height: auto;
+  min-height: 87vh;
+
+  inset: 8vh 0 8vh 15vw;
+  padding: 20px;
+}
+
+footer {
+  width: 85vw;
+  height: 5vh;
+  position: fixed;
+  background-color: rgba(255, 255, 255, 1);
+  bottom: 0;
+  left: 15vw;
+}
