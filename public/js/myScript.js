@@ -351,7 +351,7 @@ if (day < 10) {
 // Akhir Menampilkan hari
 
 // Data UPPD
-var data = [
+var data_uppd = [
   {
     id_uppd: '01',
     nama_uppd: 'UPPD KOTA SEMARANG I',
@@ -658,9 +658,13 @@ var data = [
   },
 ]
 
-$(document).ready(function () {
-  console.log(1212)
-  $('#uppd_user').select2({
-    data: data,
-  })
+// Select UPPD
+const uppd_user = document.getElementById('uppd_user')
+data_uppd.forEach((item) => {
+  const option = document.createElement('option')
+  option.value = item.id_uppd
+  option.textContent = `[${item.id_uppd}] ${item.nama_uppd}`
+  uppd_user.appendChild(option)
 })
+
+// Akhir Select UPPD

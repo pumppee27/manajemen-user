@@ -7,7 +7,7 @@
     <link rel="stylesheet" href={{url("/css/bootstrap.min.css")}}>
     <link rel="stylesheet" href={{url("/css/style.css")}}>
     <link rel="shortcut icon" href="/assets/img/favicon.png" sizes="32x32" type="image/png">
-    <link rel="stylesheet" href={{url("/css/select2.min.css")}}>
+    {{-- <link rel="stylesheet" href={{url("/css/select2.min.css")}}> --}}
     
 
     <script src={{url("/js/bootstrap.bundle.min.js")}}></script>
@@ -375,15 +375,10 @@
       </div>
     </div>
   </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> --}}
   
   <script src={{url("/js/myScript.js")}}></script>
-  <script>
-    $(document).ready(function() {
-    $('#level-user').select2({
-        placeholder: "Pilih Level User",
-    });
-});
+  
   </script>
 </body>
 </html>
