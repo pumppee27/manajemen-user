@@ -248,7 +248,7 @@
                                         </label>
                                     </div>
                                     <div class="ms-4" id="hak_akses_laporan_harian">
-                                        <input class="form-check-input" type="checkbox" value=1"" id="laporan_harian" name="laporan_harian">
+                                        <input class="form-check-input" type="checkbox" value="1" id="laporan_harian" name="laporan_harian">
                                         <label class="form-check-label" for="laporan_harian">
                                             Laporan Harian  
                                         </label>

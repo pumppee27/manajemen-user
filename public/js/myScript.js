@@ -439,7 +439,7 @@ level_user.addEventListener('change', function () {
   }
 })
 
-// Check All BAPENDA
+// Check All
 level_user.addEventListener('change', function () {
   if (this.value == 1) {
     check_all.addEventListener('change', function () {
@@ -530,6 +530,116 @@ level_user.addEventListener('change', function () {
         hapus_transaksi_kepala_uppd.checked = true
       } else {
         hapus_transaksi_kepala_uppd.checked = false
+      }
+    })
+  } else if (this.value == 3) {
+    check_all.addEventListener('change', function () {
+      if (this.checked) {
+        formulir_spopd.checked = true
+        laporan.checked = true
+        pengeluaran_spopd.checked = true
+      } else {
+        formulir_spopd.checked = false
+        laporan.checked = false
+        pengeluaran_spopd.checked = false
+      }
+    })
+  } else if (this.value == 4) {
+    check_all.addEventListener('change', function () {
+      if (this.checked) {
+        verval.checked = true
+        perbaikan_data_verifikasi.checked = true
+        laporan.checked = true
+        perubahan_data.checked = true
+        informasi_kendaraan.checked = true
+      } else {
+        verval.checked = false
+        perbaikan_data_verifikasi.checked = false
+        laporan.checked = false
+        perubahan_data.checked = false
+        informasi_kendaraan.checked = false
+      }
+    })
+  } else if (this.value == 5) {
+    check_all.addEventListener('change', function () {
+      if (this.checked) {
+        manajemen.checked = true
+        formulir_spopd.checked = true
+        verval.checked = true
+        perbaikan_data_verifikasi.checked = true
+        laporan.checked = true
+        pengeluaran_spopd.checked = true
+        perubahan_data.checked = true
+        perubahan_biaya.checked = true
+        laporan_harian.checked = true
+        laporan_bulanan.checked = true
+        laporan_pd.checked = true
+        laporan_online.checked = true
+        laporan_pembebasan.checked = true
+        form_khusus.checked = true
+        form_fiskal.checked = true
+        blokir_kendaraan.checked = true
+        informasi_kendaraan.checked = true
+        admin_progresif.checked = true
+        status_transaksi.checked = true
+        perbaikan_data_sjo.checked = true
+      } else {
+        manajemen.checked = false
+        formulir_spopd.checked = false
+        verval.checked = false
+        perbaikan_data_verifikasi.checked = false
+        laporan.checked = false
+        pengeluaran_spopd.checked = false
+        perubahan_data.checked = false
+        perubahan_biaya.checked = false
+        laporan_harian.checked = false
+        laporan_bulanan.checked = false
+        laporan_pd.checked = false
+        laporan_online.checked = false
+        laporan_pembebasan.checked = false
+        form_khusus.checked = false
+        form_fiskal.checked = false
+        blokir_kendaraan.checked = false
+        informasi_kendaraan.checked = false
+        admin_progresif.checked = false
+        status_transaksi.checked = false
+        perbaikan_data_sjo.checked = false
+      }
+    })
+  } else if (this.value == 6) {
+    check_all.addEventListener('change', function () {
+      if (this.checked) {
+        verifikasi_jr.checked = true
+        laporan.checked = true
+        laporan_pembebasan.checked = true
+        split_jr.checked = true
+      } else {
+        verifikasi_jr.checked = false
+        laporan.checked = false
+        laporan_pembebasan.checked = false
+        split_jr.checked = false
+      }
+    })
+  } else if (this.value == 7) {
+    check_all.addEventListener('change', function () {
+      if (this.checked) {
+        verifikasi_jr.checked = true
+        laporan.checked = true
+        laporan_pembebasan.checked = true
+        split_jr.checked = true
+      } else {
+        verifikasi_jr.checked = false
+        laporan.checked = false
+        laporan_pembebasan.checked = false
+        split_jr.checked = false
+      }
+    })
+  } else if (this.value == 8) {
+    check_all.addEventListener('change', function () {
+      if (this.checked) {
+        form_fiskal.checked = true
+      } else {
+        form_fiskal.checked = false
       }
     })
   }
