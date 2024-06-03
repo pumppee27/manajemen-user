@@ -10,41 +10,38 @@ body {
 
 header {
   position: fixed;
-  width: 100vw;
+  width: 85vw;
   height: 8vh;
+  inset: 0 0 0 15vw;
   padding: 0;
   background-color: rgba(255, 255, 255, 1);
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   z-index: 1000;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  transition: all ease 0.5s;
 }
 
-header #logo {
-  width: 15vw;
-  display: block;
-  position: absolute;
-  left: 0;
-  cursor: pointer;
-}
-header #logo img {
-  width: 40%;
-  display: block;
-  margin: 0 auto;
-}
-header #toggle-sidebar img {
-  width: 2rem;
+header #toggle-sidebar svg {
   display: block;
   cursor: pointer;
-  position: absolute;
-  top: 30%;
-  left: 15vw;
 }
 
+header #date-time {
+  position: absolute;
+  left: 65%;
+}
 header #user-menu {
-  position: absolute;
   right: 0;
+}
+
+header #user-menu .dropdown ul li a {
+  text-decoration: none;
+  color: black;
+}
+header #user-menu .dropdown ul li a svg {
+  margin: 0 10px 0 5px;
 }
 
 header .dropdown-toggle-user:hover {
@@ -57,11 +54,27 @@ header .dropdown-toggle-user:focus {
 
 aside {
   width: 15vw;
-  min-height: 92vh;
-  top: 8vh;
+  min-height: 100vh;
+  top: 0;
   height: auto;
   position: fixed;
   background-color: rgba(255, 255, 255, 1);
+  transition: all ease 0.5s;
+}
+
+aside #logo {
+  height: 8vh;
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
+aside #logo img {
+  width: 50%;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  display: block;
+  margin: 0 auto;
 }
 
 aside nav ul {
@@ -94,7 +107,7 @@ main {
   width: 85vw;
   height: auto;
   min-height: 87vh;
-
+  transition: all ease 0.5s;
   inset: 8vh 0 8vh 15vw;
   padding: 20px;
 }
@@ -106,4 +119,25 @@ footer {
   background-color: rgba(255, 255, 255, 1);
   bottom: 0;
   left: 15vw;
+}
+
+/* Scroll */
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgb(178, 178, 178);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(100, 100, 100);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #a1a1a1;
 }

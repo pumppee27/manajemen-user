@@ -1,3 +1,36 @@
+// Toggle Sidebar
+
+const hide_sidebar = () => {
+  const sidebar = document.getElementById('sidebar')
+  const hide_sidebar_icon = document.getElementById('bi-chevron-double-left')
+  const show_sidebar_icon = document.getElementById('bi-chevron-double-right')
+  const header = document.getElementById('header')
+  const main = document.getElementById('main')
+
+  sidebar.style.left = '-15vw'
+  header.style.width = '100vw'
+  header.style.left = '0'
+  main.style.left = '0'
+  main.style.width = '100vw'
+  hide_sidebar_icon.style.display = 'none'
+  show_sidebar_icon.style.display = 'block'
+}
+const show_sidebar = () => {
+  const sidebar = document.getElementById('sidebar')
+  const show_sidebar_icon = document.getElementById('bi-chevron-double-right')
+  const hide_sidebar_icon = document.getElementById('bi-chevron-double-left')
+  const main = document.getElementById('main')
+  sidebar.style.left = '0'
+  header.style.width = '85vw'
+  header.style.left = '15vw'
+  main.style.left = '15vw'
+  main.style.width = '85vw'
+  show_sidebar_icon.style.display = 'none'
+  hide_sidebar_icon.style.display = 'block'
+}
+
+// Akhir Toggle Sidebar
+
 // Hak Akses
 const level_user = document.getElementById('level-user')
 const hak_akses_pengaturan = document.getElementById('hak_akses_pengaturan')
@@ -89,6 +122,124 @@ const hak_akses_manajemen_menu = document.getElementById(
 const hak_akses_perbaikan_data_verifikasi_valbin = document.getElementById(
   'hak_akses_perbaikan_data_verifikasi_valbin',
 )
+
+const hapus_transaksi_kepala_uppd = document.getElementById(
+  'hapus_transaksi_kepala_uppd',
+)
+
+hapus_transaksi_kepala_uppd.addEventListener('change', function () {
+  this.value = 1
+})
+
+// Checked Hak Akses
+const pengaturan = document.getElementById('pengaturan')
+const utilities = document.getElementById('utilities')
+const tabel = document.getElementById('tabel')
+const jenis_layanan = document.getElementById('jenis_layanan')
+const manajemen_user = document.getElementById('manajemen_user')
+const klasifikasi_golongan = document.getElementById('klasifikasi_golongan')
+const tanda_tangan_jr = document.getElementById('tanda_tangan_jr')
+const manajemen = document.getElementById('manajemen')
+const formulir_spopd = document.getElementById('formulir_spopd')
+const verval = document.getElementById('verval')
+const perbaikan_data_verifikasi = document.getElementById(
+  'perbaikan_data_verifikasi',
+)
+const verifikasi_jr = document.getElementById('verifikasi_jr')
+const penetapan = document.getElementById('penetapan')
+const penetapan_pajak = document.getElementById('penetapan_pajak')
+const penetapan_tambahan_pajak = document.getElementById(
+  'penetapan_tambahan_pajak',
+)
+const laporan = document.getElementById('laporan')
+const pengeluaran_spopd = document.getElementById('pengeluaran_spopd')
+const perubahan_data = document.getElementById('perubahan_data')
+const perubahan_biaya = document.getElementById('perubahan_biaya')
+const laporan_harian = document.getElementById('laporan_harian')
+const laporan_bulanan = document.getElementById('laporan_bulanan')
+const laporan_pd = document.getElementById('laporan_pd')
+const laporan_online = document.getElementById('laporan_online')
+const laporan_pembebasan = document.getElementById('laporan_pembebasan')
+const form_khusus = document.getElementById('form_khusus')
+const form_fiskal = document.getElementById('form_fiskal')
+const blokir_kendaraan = document.getElementById('blokir_kendaraan')
+const informasi_kendaraan = document.getElementById('informasi_kendaraan')
+const admin_progresif = document.getElementById('admin_progresif')
+const split_jr = document.getElementById('split_jr')
+const status_transaksi = document.getElementById('status_transaksi')
+const perbaikan_data_sjo = document.getElementById('perbaikan_data_sjo')
+const keringanan = document.getElementById('keringanan')
+const permohonan_keringanan = document.getElementById('permohonan_keringanan')
+const pembayaran_keringanan = document.getElementById('pembayaran_keringanan')
+const manajemen_menu = document.getElementById('manajemen_menu')
+const perbaikan_data_verifikasi_valbin = document.getElementById(
+  'perbaikan_data_verifikasi_valbin',
+)
+const check_all = document.getElementById('check_all')
+
+// Check All Pengaturan
+pengaturan.addEventListener('change', function () {
+  if (this.checked) {
+    utilities.checked = true
+    tabel.checked = true
+    jenis_layanan.checked = true
+    manajemen_user.checked = true
+    klasifikasi_golongan.checked = true
+    tanda_tangan_jr.checked = true
+  } else {
+    utilities.checked = false
+    tabel.checked = false
+    jenis_layanan.checked = false
+    manajemen_user.checked = false
+    klasifikasi_golongan.checked = false
+    tanda_tangan_jr.checked = false
+  }
+})
+
+// Check All Penetapan
+penetapan.addEventListener('change', function () {
+  if (this.checked) {
+    penetapan_pajak.checked = true
+    penetapan_tambahan_pajak.checked = true
+  } else {
+    penetapan_pajak.checked = false
+    penetapan_tambahan_pajak.checked = false
+  }
+})
+
+// Check All Laporan
+laporan.addEventListener('change', function () {
+  if (this.checked) {
+    pengeluaran_spopd.checked = true
+    perubahan_data.checked = true
+    perubahan_biaya.checked = true
+    laporan_harian.checked = true
+    laporan_bulanan.checked = true
+    laporan_pd.checked = true
+    laporan_online.checked = true
+    laporan_pembebasan.checked = true
+  } else {
+    pengeluaran_spopd.checked = false
+    perubahan_data.checked = false
+    perubahan_biaya.checked = false
+    laporan_harian.checked = false
+    laporan_bulanan.checked = false
+    laporan_pd.checked = false
+    laporan_online.checked = false
+    laporan_pembebasan.checked = false
+  }
+})
+
+// Check All Keringanan
+keringanan.addEventListener('change', function () {
+  if (this.checked) {
+    permohonan_keringanan.checked = true
+    pembayaran_keringanan.checked = true
+  } else {
+    permohonan_keringanan.checked = false
+    pembayaran_keringanan.checked = false
+  }
+})
 
 level_user.addEventListener('change', function () {
   if (this.value == 1) {
@@ -285,6 +436,102 @@ level_user.addEventListener('change', function () {
     hak_akses_keringanan.style.display = 'none'
     hak_akses_manajemen_menu.style.display = 'none'
     hak_akses_perbaikan_data_verifikasi_valbin.style.display = 'none'
+  }
+})
+
+// Check All BAPENDA
+level_user.addEventListener('change', function () {
+  if (this.value == 1) {
+    check_all.addEventListener('change', function () {
+      if (this.checked) {
+        pengaturan.checked = true
+        utilities.checked = true
+        tabel.checked = true
+        jenis_layanan.checked = true
+        manajemen_user.checked = true
+        klasifikasi_golongan.checked = true
+        tanda_tangan_jr.checked = true
+        manajemen.checked = true
+        formulir_spopd.checked = true
+        verval.checked = true
+        perbaikan_data_verifikasi.checked = true
+        verifikasi_jr.checked = true
+        penetapan.checked = true
+        penetapan_pajak.checked = true
+        penetapan_tambahan_pajak.checked = true
+        laporan.checked = true
+        pengeluaran_spopd.checked = true
+        perubahan_data.checked = true
+        perubahan_biaya.checked = true
+        laporan_harian.checked = true
+        laporan_bulanan.checked = true
+        laporan_pd.checked = true
+        laporan_online.checked = true
+        laporan_pembebasan.checked = true
+        form_khusus.checked = true
+        form_fiskal.checked = true
+        blokir_kendaraan.checked = true
+        informasi_kendaraan.checked = true
+        admin_progresif.checked = true
+        split_jr.checked = true
+        status_transaksi.checked = true
+        perbaikan_data_sjo.checked = true
+        hapus_transaksi_kepala_uppd.checked = true
+        keringanan.checked = true
+        permohonan_keringanan.checked = true
+        pembayaran_keringanan.checked = true
+        manajemen_menu.checked = true
+        perbaikan_data_verifikasi_valbin.checked = true
+      } else {
+        pengaturan.checked = false
+        utilities.checked = false
+        tabel.checked = false
+        jenis_layanan.checked = false
+        manajemen_user.checked = false
+        klasifikasi_golongan.checked = false
+        tanda_tangan_jr.checked = false
+        manajemen.checked = false
+        formulir_spopd.checked = false
+        verval.checked = false
+        perbaikan_data_verifikasi.checked = false
+        verifikasi_jr.checked = false
+        penetapan.checked = false
+        penetapan.checked = false
+        penetapan_pajak.checked = false
+        penetapan_tambahan_pajak.checked = false
+        laporan.checked = false
+        pengeluaran_spopd.checked = false
+        perubahan_data.checked = false
+        perubahan_biaya.checked = false
+        laporan_harian.checked = false
+        laporan_bulanan.checked = false
+        laporan_pd.checked = false
+        laporan_online.checked = false
+        laporan_pembebasan.checked = false
+        form_khusus.checked = false
+        form_fiskal.checked = false
+        blokir_kendaraan.checked = false
+        informasi_kendaraan.checked = false
+        admin_progresif.checked = false
+        split_jr.checked = false
+        status_transaksi.checked = false
+        perbaikan_data_sjo.checked = false
+        hapus_transaksi_kepala_uppd.checked = false
+        keringanan.checked = false
+        permohonan_keringanan.checked = false
+        pembayaran_keringanan.checked = false
+        manajemen_menu.checked = false
+        perbaikan_data_verifikasi_valbin.checked = false
+      }
+    })
+  } else if (this.value == 2) {
+    check_all.addEventListener('change', function () {
+      if (this.checked) {
+        hapus_transaksi_kepala_uppd.checked = true
+      } else {
+        hapus_transaksi_kepala_uppd.checked = false
+      }
+    })
   }
 })
 
