@@ -6,10 +6,10 @@
     <div class="card-body">
         <div class="d-flex justify-content-between">
             <div>
-                DATA PENGGUNA
+                DATA UPPD
             </div>
             <div>
-                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#tambah_user">
+                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#tambah_uppd">
                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
                         <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
                     </svg>
@@ -22,36 +22,20 @@
             <table class="table table-bordered">
                 <thead>
                     <tr>
-                        <th scope="col" class="text-center">Username</th>
-                        <th scope="col" class="text-center">Nama Pengguna</th>
-                        <th scope="col" class="text-center">Aktif</th>
+                        <th scope="col" class="text-center">NO</th>
+                        <th scope="col" class="text-center">UPPD</th>
+                        <th scope="col" class="text-center">WILAYAH KERJA</th>
+                        <th scope="col" class="text-center">KOTA</th>
                         <th scope="col" class="text-center">Action</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($data_users as $user)
-                        
-                    
+                    @foreach ($data_uppd as $uppd)
                     <tr>
-                        <td>{{$user->nama_user}}</td>
-                        <td>{{$user->nama_user}}</td>
-                        <td class="text-center">
-                            @if ($user->is_active)
-                                <button type="button" class="btn btn-success btn-sm">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
-                                        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0"/>
-                                    </svg>
-                                    Aktif
-                                </button>
-                            @else
-                            <button type="button" class="btn btn-danger btn-sm">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
-                                    <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0"/>
-                                </svg>
-                                Non Aktif
-                            </button>
-                            @endif
-                        </td>
+                        <td class="text-center">{{$loop->iteration}}</td>
+                        <td>{{$uppd->nama_uppd}}</td>
+                        <td>{{$uppd->wilayah_kerja}}</td>
+                        <td>{{$uppd->kota}}</td>
                         <td class="text-center">
                             <div class="dropdown">
                                 <div class="btn btn-outline-primary px-1 py-0" data-bs-toggle="dropdown" id="dropdownMenu">
@@ -61,31 +45,6 @@
                                 </div>
                                 <ul class="dropdown-menu lh-lg shadow
                                 " aria-labelledby="dropdownMenu">
-                                <li>
-                                    <form action="/is_active/{{$user->id}}" method="post">
-                                        @csrf
-                                        @method('PATCH')
-                                        @if($user->is_active)
-                                            <input type="hidden" name="is_active" value="0">
-                                            <button class="dropdown-item" type="submit">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-check2 m-2" viewBox="0 0 16 16">
-                                                    <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0"/>
-                                                </svg>
-                                            Nonaktifkan
-                                            </button>
-                                            
-                                        @else
-                                            <input type="hidden" name="is_active" value="1">
-                                            <button class="dropdown-item" type="submit">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-check2 m-2" viewBox="0 0 16 16">
-                                                    <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0"/>
-                                                </svg>
-                                            Aktifkan User
-                                            </button>
-                                        
-                                        @endif
-                                    </form>
-                                  </li>
                                   <li>
                                     <a class="dropdown-item" href="#">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-pencil-square m-2" viewBox="0 0 16 16">
@@ -124,6 +83,6 @@
         </div>
     </div>
 </div>
-@include('user.modal.tambah-user')
+@include('uppd.modal.tambah-uppd')
 @endsection
 

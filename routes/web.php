@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UppdController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -18,5 +19,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// UPPD
+Route::get('/uppd', [UppdController::class, 'index'])->name('uppd');
+Route::post('/uppd', [UppdController::class, 'store']);
+
 Route::get('/user', [UserController::class, 'index'])->name('user');
 Route::post('/user', [UserController::class, 'store']);
+Route::patch('/is_active/{id}', [UserController::class, 'is_active']);

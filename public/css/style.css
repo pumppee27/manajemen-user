@@ -3,6 +3,16 @@
   margin: 0;
 }
 
+.backdrop {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  z-index: 500;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  left: 0;
+}
+
 body {
   overflow-x: hidden;
   background-color: rgba(244, 242, 245, 1);
@@ -18,7 +28,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 1000;
+  z-index: 499;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   transition: all ease 0.5s;
 }

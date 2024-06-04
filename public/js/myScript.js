@@ -28,7 +28,6 @@ const show_sidebar = () => {
   show_sidebar_icon.style.display = 'none'
   hide_sidebar_icon.style.display = 'block'
 }
-
 // Akhir Toggle Sidebar
 
 // Hak Akses
@@ -130,6 +129,10 @@ const hapus_transaksi_kepala_uppd = document.getElementById(
 hapus_transaksi_kepala_uppd.addEventListener('change', function () {
   this.value = 1
 })
+
+if (level_user == 1) {
+  console.log(6767676)
+}
 
 // Checked Hak Akses
 const pengaturan = document.getElementById('pengaturan')
@@ -710,7 +713,7 @@ if (day < 10) {
 // Data UPPD
 var data_uppd = [
   {
-    id_uppd: '01',
+    id_uppd: '1',
     nama_uppd: 'UPPD KOTA SEMARANG I',
     wilayah_kerja: 'KOTA SEMARANG I',
     kota: 'SEMARANG',
@@ -718,7 +721,7 @@ var data_uppd = [
     created_by: null,
   },
   {
-    id_uppd: '02',
+    id_uppd: '2',
     nama_uppd: 'UPPD KOTA SEMARANG II',
     wilayah_kerja: 'KOTA SEMARANG II',
     kota: 'SEMARANG',
@@ -726,7 +729,7 @@ var data_uppd = [
     created_by: null,
   },
   {
-    id_uppd: '03',
+    id_uppd: '3',
     nama_uppd: 'UPPD KOTA SEMARANG III',
     wilayah_kerja: 'KOTA SEMARANG III',
     kota: 'SEMARANG',
@@ -734,7 +737,7 @@ var data_uppd = [
     created_by: null,
   },
   {
-    id_uppd: '04',
+    id_uppd: '4',
     nama_uppd: 'UPPD KOTA SALATIGA',
     wilayah_kerja: 'KOTA SALATIGA',
     kota: 'SALATIGA',
@@ -742,7 +745,7 @@ var data_uppd = [
     created_by: null,
   },
   {
-    id_uppd: '05',
+    id_uppd: '5',
     nama_uppd: 'UPPD KAB. SEMARANG',
     wilayah_kerja: 'KAB. SEMARANG',
     kota: 'UNGARAN',
@@ -750,7 +753,7 @@ var data_uppd = [
     created_by: null,
   },
   {
-    id_uppd: '06',
+    id_uppd: '6',
     nama_uppd: 'UPPD KAB. KENDAL',
     wilayah_kerja: 'KAB. KENDAL',
     kota: 'KENDAL',
@@ -758,7 +761,7 @@ var data_uppd = [
     created_by: null,
   },
   {
-    id_uppd: '07',
+    id_uppd: '7',
     nama_uppd: 'UPPD KAB. DEMAK',
     wilayah_kerja: 'KAB. DEMAK',
     kota: 'DEMAK',
@@ -766,7 +769,7 @@ var data_uppd = [
     created_by: null,
   },
   {
-    id_uppd: '08',
+    id_uppd: '8',
     nama_uppd: 'UPPD KAB. GROBOGAN',
     wilayah_kerja: 'KAB. GROBOGAN',
     kota: 'GROBOGAN',
@@ -774,7 +777,7 @@ var data_uppd = [
     created_by: null,
   },
   {
-    id_uppd: '09',
+    id_uppd: '9',
     nama_uppd: 'UPPD KOTA SURAKARTA',
     wilayah_kerja: 'KOTA SURAKARTA',
     kota: 'SURAKARTA',
@@ -1020,7 +1023,7 @@ const uppd_user = document.getElementById('uppd_user')
 data_uppd.forEach((item) => {
   const option = document.createElement('option')
   option.value = item.id_uppd
-  option.textContent = `[${item.id_uppd}] ${item.nama_uppd}`
+  option.textContent = `[${item.id_uppd}] - ${item.nama_uppd}`
   uppd_user.appendChild(option)
 })
 

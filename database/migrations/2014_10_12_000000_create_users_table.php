@@ -4,8 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
-{
+return new class extends Migration {
     /**
      * Run the migrations.
      *
@@ -15,11 +14,144 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
+            $table->integer('level_user');
+            $table->string('nama_user');
+            $table->integer('uppd_id');
+            $table->integer('lokasi_id');
+            $table->string('user_login');
             $table->string('password');
-            $table->rememberToken();
+            $table
+                ->integer('utilities')
+                ->default(0)
+                ->nullable();
+            $table
+                ->integer('jenis_layanan')
+                ->default(0)
+                ->nullable();
+            $table
+                ->integer('manajemen_user')
+                ->default(0)
+                ->nullable();
+            $table
+                ->integer('klasifikasi_golongan')
+                ->default(0)
+                ->nullable();
+            $table
+                ->integer('tanda_tangan_jr')
+                ->default(0)
+                ->nullable();
+            $table
+                ->integer('manajemen')
+                ->default(0)
+                ->nullable();
+            $table
+                ->integer('formulir_spopd')
+                ->default(0)
+                ->nullable();
+            $table
+                ->integer('verval')
+                ->default(0)
+                ->nullable();
+            $table
+                ->integer('perbaikan_data_verifikasi')
+                ->default(0)
+                ->nullable();
+            $table
+                ->integer('verifikasi_jr')
+                ->default(0)
+                ->nullable();
+            $table
+                ->integer('penetapan_pajak')
+                ->default(0)
+                ->nullable();
+            $table
+                ->integer('penetapan_tambahan_pajak')
+                ->default(0)
+                ->nullable();
+            $table
+                ->integer('pengeluaran_spopd')
+                ->default(0)
+                ->nullable();
+            $table
+                ->integer('perubahan_data')
+                ->default(0)
+                ->nullable();
+            $table
+                ->integer('perubahan_biaya')
+                ->default(0)
+                ->nullable();
+            $table
+                ->integer('laporan_harian')
+                ->default(0)
+                ->nullable();
+            $table
+                ->integer('laporan_bulanan')
+                ->default(0)
+                ->nullable();
+            $table
+                ->integer('laporan_pd')
+                ->default(0)
+                ->nullable();
+            $table
+                ->integer('laporan_online')
+                ->default(0)
+                ->nullable();
+            $table
+                ->integer('laporan_pembebasan')
+                ->default(0)
+                ->nullable();
+            $table
+                ->integer('form_khusus')
+                ->default(0)
+                ->nullable();
+            $table
+                ->integer('form_fiskal')
+                ->default(0)
+                ->nullable();
+            $table
+                ->integer('blokir_kendaraan')
+                ->default(0)
+                ->nullable();
+            $table
+                ->integer('informasi_kendaraan')
+                ->default(0)
+                ->nullable();
+            $table
+                ->integer('split_jr')
+                ->default(0)
+                ->nullable();
+            $table
+                ->integer('status_transaksi')
+                ->default(0)
+                ->nullable();
+            $table
+                ->integer('perbaikan_data_sjo')
+                ->default(0)
+                ->nullable();
+            $table
+                ->integer('hapus_transaksi_kepala_uppd')
+                ->default(0)
+                ->nullable();
+            $table
+                ->integer('permohonan_keringanan')
+                ->default(0)
+                ->nullable();
+            $table
+                ->integer('pembayaran_keringanan')
+                ->default(0)
+                ->nullable();
+            $table
+                ->integer('manajemen_menu')
+                ->default(0)
+                ->nullable();
+            $table
+                ->integer('perbaikan_data_verifikasi_valbin')
+                ->default(0)
+                ->nullable();
+            $table
+                ->integer('is_active')
+                ->default(0)
+                ->nullable();
             $table->timestamps();
         });
     }

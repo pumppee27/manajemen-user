@@ -34,7 +34,7 @@
   <div id="user-menu">
       <div class="dropdown me-3">
           <button class="btn dropdown-toggle dropdown-toggle-user" type="button" data-bs-toggle="dropdown" aria-expanded="false" >
-            Penggunajhjhgj uggjgjgjg gjgjgjg
+            User
           </button>
           <ul class="dropdown-menu dropdown-menu-end">
             <li>
