@@ -16,8 +16,8 @@ return new class extends Migration {
             $table->id();
             $table->integer('level_user');
             $table->string('nama_user');
-            $table->integer('uppd_id');
-            $table->integer('lokasi_id');
+            $table->integer('uppd_id')->nullable();
+            $table->integer('lokasi_id')->nullable();
             $table->string('user_login');
             $table->string('password');
             $table
